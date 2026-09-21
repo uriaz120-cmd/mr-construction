@@ -1,0 +1,149 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  name         String
+  email        String?  @unique
+  passwordHash String
+  role         String   @default("superadmin")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SiteSetting {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  value       String
+  group       String   @default("general") // general, contact, hero, stats, seo, social
+  description String?
+  updatedAt   DateTime @updatedAt
+}
+
+model Service {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  title            String
+  shortDescription String
+  fullDescription  String
+  icon             String   @default("Hammer")
+  featuredImage    String?
+  featuresListJson String?  // JSON array string of highlights
+  equipmentJson    String?  // JSON array of machinery/equipment used
+  order            Int      @default(0)
+  isFeatured       Boolean  @default(true)
+  isActive         Boolean  @default(true)
+  metaTitle        String?
+  metaDescription  String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model Project {
+  id               String         @id @default(cuid())
+  slug             String         @unique
+  title            String
+  category         String         // Highway, Road, Civil, Demolition, Earthwork, Building
+  clientOrPartner  String?        // e.g., Frontier Works Organization (FWO), NLC, DHA
+  partnerRole      String?        // e.g., Work Partner / Subcontractor / Joint Execution
+  location         String         // e.g., Karachi–Chaman Highway / Karachi, Sindh / Balochistan
+  status           String         @default("Ongoing") // Ongoing, Completed, Upcoming
+  isFeatured       Boolean        @default(false)
+  isCurrentProject Boolean        @default(false)
+  startDate        String?
+  completionDate   String?
+  shortDescription String
+  fullDescription  String
+  scopeListJson    String?        // JSON array of scope points
+  specsJson        String?        // JSON object with keys like length, asphalt tonnage, earthwork volume
+  featuredImage    String
+  metaTitle        String?
+  metaDescription  String?
+  order            Int            @default(0)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  images           ProjectImage[]
+}
+
+model ProjectImage {
+  id        String   @id @default(cuid())
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  imageUrl  String
+  caption   String?
+  altText   String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model GalleryItem {
+  id        String   @id @default(cuid())
+  title     String
+  caption   String?
+  altText   String?
+  category  String   @default("Site Work") // Road Construction, Highway Projects, Building Construction, Machinery, Site Work, Completed Projects, Team
+  imageUrl  String
+  projectId String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model Organization {
+  id          String   @id @default(cuid())
+  name        String
+  logoUrl     String?
+  description String?
+  websiteUrl  String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  authorName  String
+  authorTitle String?
+  company     String?
+  quote       String
+  rating      Int      @default(5)
+  avatarUrl   String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model ContactMessage {
+  id              String   @id @default(cuid())
+  name            String
+  company         String?
+  phone           String?
+  email           String
+  serviceRequired String?
+  subject         String?
+  message         String
+  isRead          Boolean  @default(false)
+  isArchived      Boolean  @default(false)
+  createdAt       DateTime @default(now())
+}
+
+model QuoteRequest {
+  id                String   @id @default(cuid())
+  name              String
+  company           String?
+  phone             String
+  email             String
+  projectType       String?
+  location          String?
+  budgetRange       String?
+  estimatedTimeline String?
+  message           String
+  status            String   @default("Pending") // Pending, Reviewed, In Contact, Closed
+  createdAt         DateTime @default(now())
+}
