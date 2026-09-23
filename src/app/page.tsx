@@ -272,10 +272,10 @@ export default async function HomePage() {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-slate-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=1000&q=80"
-                  alt="MR. Construction Civil Engineering Works"
+                  src="/images/muhammad-raaziq-ceo.jpg"
+                  alt="Muhammad Raaziq - Founder & Chief Executive MR. Construction"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
 

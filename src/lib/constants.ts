@@ -30,7 +30,7 @@ export const INITIAL_SERVICES = [
       "Thermoplastic Road Marking & Highway Signage"
     ],
     equipment: ["Vögele Asphalt Pavers", "Hamm Tandem & Pneumatic Rollers", "CAT Motor Graders", "Bitumen Sprayers"],
-    featuredImage: "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=1200&q=80",
+    featuredImage: "/images/road-construction.jpg",
     order: 1
   },
   {
