@@ -41,6 +41,7 @@ export function Header({ settings }: { settings: SiteSettingsMap }) {
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Reviews", href: "/reviews" },
     { name: "Associations", href: "/clients" },
     { name: "Contact Us", href: "/contact" },
   ];

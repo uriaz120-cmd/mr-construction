@@ -33,7 +33,7 @@ async function main() {
     { key: "whatsapp", value: "+92 342 2427006", group: "contact", description: "WhatsApp Contact Number" },
     { key: "email", value: "info@mrconstruction.pk", group: "contact", description: "Official Email Address" },
     { key: "working_hours", value: "Monday - Saturday: 8:00 AM - 7:00 PM", group: "contact", description: "Business Hours" },
-    { key: "google_maps_embed", value: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115858.91090123512!2d66.8668962239486!3d24.89679261730079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb36a9cf1863583%3A0xe54e19ea81ee28e2!2sHawksbay%2C%20Karachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s", group: "contact", description: "Google Maps Embed URL" },
+    { key: "google_maps_embed", value: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.049405629167!2d66.8963874!3d24.8914835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb313000ea6c841%3A0x4091ae8bb35e5c46!2sMR.Construction%20Company!5e0!3m2!1sen!2spk!4v1710000000000!5m2!1sen!2spk", group: "contact", description: "Google Maps Embed URL" },
     { key: "hero_badge", value: "Leading Infrastructure & Civil Contractor in Pakistan", group: "hero", description: "Hero Top Badge" },
     { key: "hero_title", value: "Building Roads. Building Infrastructure. Building Pakistan.", group: "hero", description: "Main Hero Headline" },
     { key: "hero_subtitle", value: "MR. Construction provides professional road, highway, building, civil and demolition services across Pakistan.", group: "hero", description: "Hero Subheading" },
@@ -534,6 +534,52 @@ async function main() {
     await prisma.galleryItem.create({ data: item });
   }
   console.log("Gallery seeded.");
+
+  // 7. Initial Client Reviews / Testimonials
+  const testimonials = [
+    {
+      authorName: "Engr. Tariq Mahmood",
+      authorTitle: "Senior Project Coordinator",
+      company: "National Highway & Infrastructure Partner",
+      quote: "MR. Construction's fleet deployment and asphalt paving precision on our highway corridor sections have been exemplary. Their adherence to NHA and AASHTO compaction specifications delivered a superior road surface ahead of schedule.",
+      rating: 5,
+      order: 1,
+      isActive: true,
+    },
+    {
+      authorName: "Khurram Shahzad",
+      authorTitle: "Resident Engineer",
+      company: "Karachi Sector Urban Development",
+      quote: "Exceptional earthmoving and subgrade stabilization capability. Muhammad Raaziq and his team mobilized CAT graders and vibratory rollers within 24 hours of contract award. Outstanding civil engineering integrity.",
+      rating: 5,
+      order: 2,
+      isActive: true,
+    },
+    {
+      authorName: "Hamza Farooq",
+      authorTitle: "Operations Director",
+      company: "Sindh Logistics & Freight Terminal Hub",
+      quote: "High-tonnage dynamic compaction and concrete hardstanding aprons executed with zero safety incidents. The quality of aggregate base and storm drainage culverts surpassed our structural audits.",
+      rating: 5,
+      order: 3,
+      isActive: true,
+    },
+    {
+      authorName: "Bilal Ahmed Khan",
+      authorTitle: "Managing Partner",
+      company: "Coastal Commercial Development",
+      quote: "Controlled mechanical structural demolition executed flawlessly in high-density urban Karachi. Debris crushing and dust suppression misting systems met strict environmental standards. Highly recommended.",
+      rating: 5,
+      order: 4,
+      isActive: true,
+    }
+  ];
+
+  await prisma.testimonial.deleteMany();
+  for (const t of testimonials) {
+    await prisma.testimonial.create({ data: t });
+  }
+  console.log("Testimonials seeded.");
 
   console.log("Database seeded successfully!");
 }

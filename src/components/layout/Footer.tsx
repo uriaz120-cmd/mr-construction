@@ -10,7 +10,8 @@ import {
   ShieldCheck,
   Building2,
   ExternalLink,
-  MessageSquare
+  MessageSquare,
+  Code2
 } from "lucide-react";
 import { SiteSettingsMap } from "@/lib/types";
 
@@ -133,6 +134,12 @@ export function Footer({ settings }: { settings: SiteSettingsMap }) {
                 </Link>
               </li>
               <li>
+                <Link href="/reviews" className="text-slate-400 hover:text-orange-400 flex items-center gap-1.5 transition-colors">
+                  <ArrowRight className="w-3.5 h-3.5 text-orange-500" />
+                  <span>Client Reviews & Ratings</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/clients" className="text-slate-400 hover:text-orange-400 flex items-center gap-1.5 transition-colors">
                   <ArrowRight className="w-3.5 h-3.5 text-orange-500" />
                   <span>Associations & Clients</span>
@@ -232,8 +239,41 @@ export function Footer({ settings }: { settings: SiteSettingsMap }) {
           </div>
         </div>
 
+        {/* Developer Agency Banner (STUNWEB TECHNOLOGIES) */}
+        <div className="mt-12 bg-slate-900/90 rounded-2xl p-5 sm:p-6 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl">
+          <div className="flex flex-col sm:flex-row items-center gap-3.5 text-center sm:text-left">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-600 via-blue-600 to-indigo-600 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/20">
+              <Code2 className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                <span className="text-xs text-slate-300">Website Designed & Developed by</span>
+                <span className="text-sm font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 tracking-wide">
+                  STUNWEB TECHNOLOGIES
+                </span>
+                <span className="text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded-full border border-slate-700">
+                  Umar Abbasi
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 mt-1">
+                Grow Your Business Online • High-Performance Modern Websites & Custom Business Software
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/923150111508?text=Hello%20Stunweb%20Technologies,%20I%20saw%20the%20MR.%20Construction%20website%20and%20want%20to%20develop%20a%20website/software."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white rounded-xl text-xs font-bold transition-all shadow-lg hover:shadow-emerald-500/20 shrink-0 transform active:scale-95 cursor-pointer"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>Contact on WhatsApp (03150111508)</span>
+          </a>
+        </div>
+
         {/* Bottom Credits & Copyright */}
-        <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="mt-8 pt-6 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {currentYear} {settings.company_name || "MR. Construction"}. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
             <span>Karachi, Sindh, Pakistan</span>

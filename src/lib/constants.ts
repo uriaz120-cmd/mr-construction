@@ -12,7 +12,7 @@ export const COMPANY_INFO = {
   email: "info@mrconstruction.pk",
   workingHours: "Monday - Saturday: 8:00 AM - 7:00 PM",
   yearEstablished: "2012",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115858.91090123512!2d66.8668962239486!3d24.89679261730079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb36a9cf1863583%3A0xe54e19ea81ee28e2!2sHawksbay%2C%20Karachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.049405629167!2d66.8963874!3d24.8914835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb313000ea6c841%3A0x4091ae8bb35e5c46!2sMR.Construction%20Company!5e0!3m2!1sen!2spk!4v1710000000000!5m2!1sen!2spk",
 };
 
 export const INITIAL_SERVICES = [

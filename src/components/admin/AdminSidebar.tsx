@@ -17,7 +17,8 @@ import {
   HardHat,
   Menu,
   X,
-  ChevronRight
+  ChevronRight,
+  Star
 } from "lucide-react";
 import { TokenPayload } from "@/lib/auth";
 
@@ -32,6 +33,7 @@ export function AdminSidebar({ session }: { session: TokenPayload }) {
     { name: "Projects Portfolio", href: "/admin/projects", icon: Briefcase },
     { name: "Civil Services", href: "/admin/services", icon: Wrench },
     { name: "Photo Gallery", href: "/admin/gallery", icon: ImageIcon },
+    { name: "Client Reviews", href: "/admin/reviews", icon: Star },
     { name: "Organizations (FWO/NLC/DHA)", href: "/admin/organizations", icon: Building2 },
     { name: "Messages & RFQs", href: "/admin/messages", icon: Mail },
     { name: "Website & SEO Settings", href: "/admin/settings", icon: Settings },

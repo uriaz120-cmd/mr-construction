@@ -12,7 +12,8 @@ import {
   Building2,
   FileText,
   Calculator,
-  HardHat
+  HardHat,
+  ExternalLink
 } from "lucide-react";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { QuoteForm } from "@/components/forms/QuoteForm";
@@ -34,7 +35,7 @@ export function ContactClient({ settings }: { settings: SiteSettingsMap }) {
   const email = settings.email || "info@mrconstruction.pk";
   const address = settings.office_address || "Office 133, Near Police Station, Sector 9-C, Hawksbay, Musharaf Colony, Karachi, Pakistan.";
   const ownerName = settings.owner_name || "Muhammad Raaziq";
-  const mapEmbed = settings.google_maps_embed || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115858.91090123512!2d66.8668962239486!3d24.89679261730079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb36a9cf1863583%3A0xe54e19ea81ee28e2!2sHawksbay%2C%20Karachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s";
+  const mapEmbed = settings.google_maps_embed || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.049405629167!2d66.8963874!3d24.8914835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb313000ea6c841%3A0x4091ae8bb35e5c46!2sMR.Construction%20Company!5e0!3m2!1sen!2spk!4v1710000000000!5m2!1sen!2spk";
 
   const cleanPhone = phone.replace(/[^0-9+]/g, "");
   const cleanWhatsapp = whatsapp.replace(/[^0-9]/g, "");
@@ -135,18 +136,29 @@ export function ContactClient({ settings }: { settings: SiteSettingsMap }) {
 
       {/* Embedded Google Map */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-        <div className="p-6 border-b border-slate-100 flex items-center justify-between">
+        <div className="p-6 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-orange-600" />
-            <h3 className="font-bold text-lg text-slate-900 font-heading">
-              Head Office Location Map • Hawksbay, Karachi
-            </h3>
+            <MapPin className="w-5 h-5 text-orange-600 shrink-0" />
+            <div>
+              <h3 className="font-bold text-lg text-slate-900 font-heading">
+                MR. Construction Company • Head Office
+              </h3>
+              <p className="text-xs text-slate-500">
+                Sector 9-C, Near Police Station, Hawksbay, Musharaf Colony, Karachi
+              </p>
+            </div>
           </div>
-          <span className="text-xs text-slate-500 hidden sm:inline">
-            Sector 9-C, Near Police Station, Hawksbay, Musharaf Colony
-          </span>
+          <a
+            href="https://maps.app.goo.gl/Mn48vbfQteN3Af1h7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold transition-colors shrink-0 shadow-sm"
+          >
+            <span>Get Directions / Open in Maps</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
-        <div className="w-full h-96 relative bg-slate-100">
+        <div className="w-full h-96 sm:h-[450px] relative bg-slate-100">
           <iframe
             src={mapEmbed}
             width="100%"

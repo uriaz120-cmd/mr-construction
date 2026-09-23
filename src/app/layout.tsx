@@ -5,6 +5,7 @@ import { getSiteSettings } from "@/lib/settings";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/common/FloatingWhatsApp";
+import { StunwebBadge } from "@/components/common/StunwebBadge";
 import { SiteStructuredData } from "@/lib/schema-org";
 
 const inter = Inter({
@@ -99,6 +100,7 @@ export default async function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer settings={settings} />
         <FloatingWhatsApp whatsappNumber={settings.whatsapp} />
+        <StunwebBadge />
       </body>
     </html>
   );
