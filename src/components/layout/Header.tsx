@@ -45,8 +45,8 @@ export function Header({ settings }: { settings: SiteSettingsMap }) {
     { name: "Contact Us", href: "/contact" },
   ];
 
-  const phone = settings.phone || "+92 300 1234567";
-  const whatsapp = settings.whatsapp || "+92 300 1234567";
+  const phone = settings.phone || "+92 342 2427006";
+  const whatsapp = settings.whatsapp || "+92 342 2427006";
   const email = settings.email || "info@mrconstruction.pk";
   const cleanPhone = phone.replace(/[^0-9+]/g, "");
   const cleanWhatsapp = whatsapp.replace(/[^0-9]/g, "");

@@ -63,21 +63,38 @@ export default async function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Leadership Image / Card */}
             <div className="lg:col-span-5">
-              <div className="bg-slate-900 rounded-2xl p-8 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
-                <div className="w-16 h-16 rounded-xl bg-orange-600 flex items-center justify-center text-white mb-6 shadow-md">
-                  <HardHat className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-bold font-heading text-white">{ownerName}</h3>
-                <p className="text-orange-400 font-semibold text-sm">{ownerRole}</p>
-                
-                <div className="mt-6 pt-6 border-t border-slate-800 space-y-3 text-xs text-slate-300">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-orange-500 shrink-0" />
-                    <span>Headquartered in Karachi, Operations Nationwide</span>
+              <div className="bg-slate-900 rounded-2xl text-white border border-slate-800 shadow-2xl overflow-hidden group">
+                {/* Executive Portrait */}
+                <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] bg-slate-950 overflow-hidden">
+                  <Image
+                    src="/images/muhammad-raaziq-ceo.jpg"
+                    alt={`${ownerName} - ${ownerRole} at MR. Construction`}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-90" />
+                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+                    <span className="px-3 py-1 bg-orange-600/90 backdrop-blur-sm text-white text-[11px] font-bold rounded-md uppercase tracking-wider shadow">
+                      Executive Leadership
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-orange-500 shrink-0" />
-                    <span>Over a Decade of Civil Contracting Experience</span>
+                </div>
+
+                {/* Information Body */}
+                <div className="p-6 sm:p-7">
+                  <h3 className="text-2xl font-bold font-heading text-white">{ownerName}</h3>
+                  <p className="text-orange-400 font-semibold text-sm mt-0.5">{ownerRole}</p>
+                  
+                  <div className="mt-5 pt-5 border-t border-slate-800 space-y-3 text-xs text-slate-300">
+                    <div className="flex items-center gap-2.5">
+                      <MapPin className="w-4 h-4 text-orange-500 shrink-0" />
+                      <span>Headquartered in Karachi, Operations Nationwide</span>
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                      <ShieldCheck className="w-4 h-4 text-orange-500 shrink-0" />
+                      <span>Over a Decade of Civil Contracting Experience</span>
+                    </div>
                   </div>
                 </div>
               </div>

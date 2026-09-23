@@ -16,8 +16,8 @@ import { SiteSettingsMap } from "@/lib/types";
 
 export function Footer({ settings }: { settings: SiteSettingsMap }) {
   const currentYear = new Date().getFullYear();
-  const phone = settings.phone || "+92 300 1234567";
-  const whatsapp = settings.whatsapp || "+92 300 1234567";
+  const phone = settings.phone || "+92 342 2427006";
+  const whatsapp = settings.whatsapp || "+92 342 2427006";
   const email = settings.email || "info@mrconstruction.pk";
   const address = settings.office_address || "Office 133, Near Police Station, Sector 9-C, Hawksbay, Musharaf Colony, Karachi, Pakistan.";
   const cleanPhone = phone.replace(/[^0-9+]/g, "");

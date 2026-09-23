@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { MessageSquare, X, Send } from "lucide-react";
 
-export function FloatingWhatsApp({ whatsappNumber = "+92 300 1234567" }: { whatsappNumber?: string }) {
+export function FloatingWhatsApp({ whatsappNumber = "+92 342 2427006" }: { whatsappNumber?: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("Hello MR. Construction, I would like to inquire about your construction and civil engineering services.");
 

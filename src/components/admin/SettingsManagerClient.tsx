@@ -117,7 +117,7 @@ export function SettingsManagerClient({ initialSettings }: { initialSettings: Si
               value={settings.phone || ""}
               onChange={(e) => handleChange("phone", e.target.value)}
               className="w-full px-3.5 py-2.5 rounded-lg bg-slate-850 border border-slate-750 text-white text-xs focus:outline-none focus:ring-2 focus:ring-orange-500"
-              placeholder="+92 300 1234567"
+              placeholder="+92 342 2427006"
             />
           </div>
 
@@ -130,7 +130,7 @@ export function SettingsManagerClient({ initialSettings }: { initialSettings: Si
               value={settings.whatsapp || ""}
               onChange={(e) => handleChange("whatsapp", e.target.value)}
               className="w-full px-3.5 py-2.5 rounded-lg bg-slate-850 border border-slate-750 text-white text-xs focus:outline-none focus:ring-2 focus:ring-orange-500"
-              placeholder="+92 300 1234567"
+              placeholder="+92 342 2427006"
             />
           </div>
 

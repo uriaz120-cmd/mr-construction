@@ -12,7 +12,7 @@ async function main() {
 
   const admin = await prisma.adminUser.upsert({
     where: { username: "admin" },
-    update: {},
+    update: { passwordHash: passwordHash },
     create: {
       username: "admin",
       name: "Muhammad Raaziq",
@@ -29,8 +29,8 @@ async function main() {
     { key: "owner_name", value: "Muhammad Raaziq", group: "general", description: "Company Owner / CEO" },
     { key: "owner_role", value: "Founder & Chief Executive", group: "general", description: "Designation" },
     { key: "office_address", value: "Office 133, Near Police Station, Sector 9-C, Hawksbay, Musharaf Colony, Karachi, Pakistan.", group: "contact", description: "Registered Head Office" },
-    { key: "phone", value: "+92 300 1234567", group: "contact", description: "Primary Phone Number" },
-    { key: "whatsapp", value: "+92 300 1234567", group: "contact", description: "WhatsApp Contact Number" },
+    { key: "phone", value: "+92 342 2427006", group: "contact", description: "Primary Phone Number" },
+    { key: "whatsapp", value: "+92 342 2427006", group: "contact", description: "WhatsApp Contact Number" },
     { key: "email", value: "info@mrconstruction.pk", group: "contact", description: "Official Email Address" },
     { key: "working_hours", value: "Monday - Saturday: 8:00 AM - 7:00 PM", group: "contact", description: "Business Hours" },
     { key: "google_maps_embed", value: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115858.91090123512!2d66.8668962239486!3d24.89679261730079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb36a9cf1863583%3A0xe54e19ea81ee28e2!2sHawksbay%2C%20Karachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s", group: "contact", description: "Google Maps Embed URL" },

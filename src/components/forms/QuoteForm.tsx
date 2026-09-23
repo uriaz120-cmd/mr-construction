@@ -132,7 +132,7 @@ export function QuoteForm() {
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-              placeholder="e.g. +92 300 1234567"
+              placeholder="e.g. +92 342 2427006"
             />
           </div>
 

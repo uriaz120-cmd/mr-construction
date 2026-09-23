@@ -7,8 +7,8 @@ export const COMPANY_INFO = {
   province: "Sindh",
   country: "Pakistan",
   serviceArea: "All Pakistan",
-  phone: "+92 300 1234567", // default placeholder, editable in Admin
-  whatsapp: "+92 300 1234567", // default placeholder, editable in Admin
+  phone: "+92 342 2427006",
+  whatsapp: "+92 342 2427006",
   email: "info@mrconstruction.pk",
   workingHours: "Monday - Saturday: 8:00 AM - 7:00 PM",
   yearEstablished: "2012",

@@ -56,7 +56,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!project) notFound();
 
   const settings = await getSiteSettings();
-  const whatsapp = settings.whatsapp || "+92 300 1234567";
+  const whatsapp = settings.whatsapp || "+92 342 2427006";
   const cleanWhatsapp = whatsapp.replace(/[^0-9]/g, "");
 
   let scopeList: string[] = [];

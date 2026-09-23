@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import {
   MapPin,
@@ -28,8 +29,8 @@ export function ContactClient({ settings }: { settings: SiteSettingsMap }) {
     }
   }, [searchParams]);
 
-  const phone = settings.phone || "+92 300 1234567";
-  const whatsapp = settings.whatsapp || "+92 300 1234567";
+  const phone = settings.phone || "+92 342 2427006";
+  const whatsapp = settings.whatsapp || "+92 342 2427006";
   const email = settings.email || "info@mrconstruction.pk";
   const address = settings.office_address || "Office 133, Near Police Station, Sector 9-C, Hawksbay, Musharaf Colony, Karachi, Pakistan.";
   const ownerName = settings.owner_name || "Muhammad Raaziq";
@@ -86,10 +87,15 @@ export function ContactClient({ settings }: { settings: SiteSettingsMap }) {
 
         {/* Executive Management */}
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-          <div className="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center border border-orange-200">
-            <HardHat className="w-6 h-6" />
+          <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-orange-300 shadow-sm">
+            <Image
+              src="/images/muhammad-raaziq-ceo.jpg"
+              alt={ownerName}
+              fill
+              className="object-cover object-top"
+            />
           </div>
-          <h3 className="font-bold text-base text-slate-900 font-heading">Executive Management</h3>
+          <h3 className="font-bold text-base text-slate-900 font-heading">Executive Leadership</h3>
           <p className="text-sm font-bold text-slate-900">{ownerName}</p>
           <p className="text-xs text-slate-500">Founder & Chief Executive</p>
         </div>

@@ -55,7 +55,7 @@ export default async function HomePage() {
     orderBy: { order: "asc" },
   });
 
-  const whatsapp = settings.whatsapp || "+92 300 1234567";
+  const whatsapp = settings.whatsapp || "+92 342 2427006";
   const cleanWhatsapp = whatsapp.replace(/[^0-9]/g, "");
 
   return (
