@@ -75,7 +75,7 @@ async function main() {
         "Thermoplastic Road Marking & Highway Signage"
       ]),
       equipmentJson: JSON.stringify(["Vögele Asphalt Pavers", "Hamm Tandem & Pneumatic Rollers", "CAT Motor Graders", "Bitumen Sprayers"]),
-      featuredImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=1200&q=80",
       order: 1,
       isFeatured: true
     },
@@ -129,7 +129,7 @@ async function main() {
         "Heavy Duty Concrete Hardstanding & Aprons"
       ]),
       equipmentJson: JSON.stringify(["Hydraulic Breakers", "Boom Pumps", "Total Stations & GPS Rovers", "Trenchers"]),
-      featuredImage: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1200&q=80",
       order: 4,
       isFeatured: true
     },
@@ -165,7 +165,7 @@ async function main() {
         "Land Reclamation & Site Leveling"
       ]),
       equipmentJson: JSON.stringify(["CAT D8/D9 Bulldozers", "CAT 336 & Komatsu PC300 Excavators", "Vibratory Padfoot Rollers", "Dump Trucks"]),
-      featuredImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1584463699035-7798b184b25e?auto=format&fit=crop&w=1200&q=80",
       order: 6,
       isFeatured: true
     },
@@ -201,7 +201,7 @@ async function main() {
         "Bulk Logistics & Quarry Site Management"
       ]),
       equipmentJson: JSON.stringify(["Mobile Jaw Crushers", "Cone Crushers", "Vibrating Screens", "Wheel Loaders (CAT 966/950)"]),
-      featuredImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=1200&q=80",
       order: 8,
       isFeatured: false
     },
@@ -219,7 +219,7 @@ async function main() {
         "Core Extraction & Marshall Stability Testing"
       ]),
       equipmentJson: JSON.stringify(["Sensor Asphalt Pavers", "Tandem Steel Wheel Rollers", "Rubber-Tired Rollers", "Cold Milling Machines"]),
-      featuredImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
       order: 9,
       isFeatured: false
     },
@@ -237,7 +237,7 @@ async function main() {
         "Turnkey Site Development Packages"
       ]),
       equipmentJson: JSON.stringify(["Low-Bed Trailers", "Hydraulic Cranes", "Water Tankers", "Survey Equipment"]),
-      featuredImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=1200&q=80",
       order: 10,
       isFeatured: false
     }
@@ -294,7 +294,7 @@ async function main() {
           order: 1
         },
         {
-          imageUrl: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
+          imageUrl: "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=1200&q=80",
           caption: "Road base compaction and aggregate leveling on N-25 section",
           altText: "Compactor working on highway sub-base",
           order: 2
@@ -335,14 +335,20 @@ async function main() {
         "Asphalt Volume": "32,000 Metric Tons",
         "Status": "Successfully Handed Over"
       }),
-      featuredImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?auto=format&fit=crop&w=1200&q=80",
       order: 2,
       images: [
         {
-          imageUrl: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
-          caption: "Completed high-durability asphalt sector roadway",
-          altText: "Urban asphalt road completed by MR Construction",
+          imageUrl: "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?auto=format&fit=crop&w=1200&q=80",
+          caption: "Completed modern dual-carriageway sector road network",
+          altText: "Urban asphalt road completed by MR Construction in DHA",
           order: 1
+        },
+        {
+          imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
+          caption: "Asphalt paving and surfacing in progress",
+          altText: "Asphalt paver laying sector road",
+          order: 2
         }
       ]
     },
@@ -373,14 +379,20 @@ async function main() {
         "Concrete Pavement": "65,000 m²",
         "Status": "Completed"
       }),
-      featuredImage: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80",
+      featuredImage: "https://images.unsplash.com/photo-1584463699035-7798b184b25e?auto=format&fit=crop&w=1200&q=80",
       order: 3,
       images: [
         {
-          imageUrl: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80",
-          caption: "Logistics apron paving and site stabilization works",
-          altText: "NLC logistics terminal earthwork and paving",
+          imageUrl: "https://images.unsplash.com/photo-1584463699035-7798b184b25e?auto=format&fit=crop&w=1200&q=80",
+          caption: "Heavy earthmoving and site grading at logistics terminal",
+          altText: "NLC logistics terminal mass earthwork and grading",
           order: 1
+        },
+        {
+          imageUrl: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1200&q=80",
+          caption: "Reinforced concrete apron and structural civil works",
+          altText: "Heavy civil construction hardstanding",
+          order: 2
         }
       ]
     },
@@ -491,9 +503,17 @@ async function main() {
       title: "Precision Asphalt Paving Operation",
       caption: "Hot mix asphalt paving with sensor-guided asphalt paver on arterial road.",
       category: "Road Construction",
-      imageUrl: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
       altText: "Asphalt paver laying bituminous concrete",
       order: 2
+    },
+    {
+      title: "Modern Urban Sector Road Network",
+      caption: "Completed dual-carriageway sector road with drainage culverts and road markings.",
+      category: "Completed Projects",
+      imageUrl: "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?auto=format&fit=crop&w=1200&q=80",
+      altText: "Dual carriageway asphalt roadway",
+      order: 3
     },
     {
       title: "Sub-base Compaction & Grading",
@@ -501,15 +521,15 @@ async function main() {
       category: "Machinery",
       imageUrl: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80",
       altText: "CAT Motor Grader working on road sub-base",
-      order: 3
+      order: 4
     },
     {
-      title: "Reinforced Concrete Civil Structure",
-      caption: "RCC foundation and column structural construction for commercial facility.",
-      category: "Building Construction",
-      imageUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
-      altText: "Reinforced concrete building construction",
-      order: 4
+      title: "Mass Earthmoving & Excavation Fleet",
+      caption: "High-tonnage excavators and dump trucks executing mass site grading and leveling.",
+      category: "Earthworks",
+      imageUrl: "https://images.unsplash.com/photo-1584463699035-7798b184b25e?auto=format&fit=crop&w=1200&q=80",
+      altText: "Heavy excavators and dump trucks on site",
+      order: 5
     },
     {
       title: "Heavy Controlled Demolition",
@@ -517,14 +537,6 @@ async function main() {
       category: "Site Work",
       imageUrl: "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1200&q=80",
       altText: "Hydraulic breaker dismantling concrete structure",
-      order: 5
-    },
-    {
-      title: "Logistics Hub Ground Engineering",
-      caption: "Comprehensive deep soil stabilization and drainage apron construction.",
-      category: "Completed Projects",
-      imageUrl: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80",
-      altText: "Industrial ground engineering and pavement works",
       order: 6
     }
   ];
