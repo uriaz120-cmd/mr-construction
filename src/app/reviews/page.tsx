@@ -9,7 +9,7 @@ export const metadata = {
   alternates: { canonical: "/reviews" },
 };
 
-export const revalidate = 30; // Revalidate every 30 seconds
+export const dynamic = "force-dynamic";
 
 export default async function ReviewsPage() {
   const reviews = await prisma.testimonial.findMany({

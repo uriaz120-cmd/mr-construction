@@ -314,7 +314,7 @@ export function ReviewsClient({ initialReviews }: { initialReviews: ReviewItem[]
                     Thank You for Your Review!
                   </h4>
                   <p className="text-xs text-emerald-200/90 leading-relaxed">
-                    Your feedback has been submitted successfully and added to our client testimonials.
+                    Your review has been published live on the website! It is now visible in our verified testimonials list.
                   </p>
                   <button
                     onClick={() => setSubmitSuccess(false)}
